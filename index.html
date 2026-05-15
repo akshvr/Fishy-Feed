@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishy Feed</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <style>
+      body { margin: 0; font-family: Arial, sans-serif; background: #eaf8ff; color: #123; }
+      main { max-width: 900px; margin: 0 auto; padding: 16px; }
+      button, input { font-size: 16px; padding: 8px; margin: 4px; }
+      .card { background: white; border-radius: 14px; padding: 14px; margin: 10px 0; box-shadow: 0 2px 8px #0002; }
+      #report { font-size: 26px; font-weight: bold; }
+      #prediction { font-size: 20px; }
+      #countdown { font-size: 18px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>🐠 Fishy Feed</h1>
+      <div class="card">
+        <button id="startBtn">Start Feeding Check Now</button>
+        <button id="resetBtn">Reset</button>
+        <button id="connectMicrobitBtn">Connect Micro:bit</button>
+        <span id="microbitStatus">Micro:bit: not connected</span>
+        <br />
+        Feeding time: <input id="feedTime" type="time" value="18:30" />
+        Check window seconds: <input id="windowSec" type="number" value="120" min="5" max="600" />
+      </div>
+      <div id="canvas-holder" class="card"></div>
+      <div class="card">
+        <div id="prediction">AI prediction: loading...</div>
+        <div id="countdown">Status: Ready</div>
+        <div id="report">No feeding check yet.</div>
+      </div>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
