@@ -1,7 +1,7 @@
 // Fishy Feed: p5.js + Teachable Machine browser app
 // Model trained by Akshara on her fish tank.
 
-const MODEL_URL = "https://teachablemachine.withgoogle.com/models/Tklb02Syj/";
+const MODEL_URL = "https://teachablemachine.withgoogle.com/models/dhBfbb-Xf/";
 
 // IMPORTANT: These names must exactly match your Teachable Machine class names.
 const FOOD_CLASS = "FOOD_DROPPED";
